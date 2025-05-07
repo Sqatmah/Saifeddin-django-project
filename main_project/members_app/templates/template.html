@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 1em;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .fruit-card {
+      background: #e8f5e9;
+      border-left: 5px solid #4CAF50;
+      padding: 1em;
+      margin: 1em 0;
+      border-radius: 4px;
+      transition: transform 0.2s ease;
+    }
+
+    .fruit-card:hover {
+      transform: scale(1.02);
+    }
+
+    p {
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 2em;
+      color: #777;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <bold>Saifeddin</bold>🍓 Fruit List
+  </header>
+
+  <div class="container">
+    {% for x in fruits %}
+      <div class="fruit-card">
+        <h2>{{ x }}</h2>
+      </div>
+    {% empty %}
+      <p>No fruits found.</p>
+    {% endfor %}
+
+    <p>Check <code>views.py</code> to see how the <strong>fruits</strong> variable is passed to this template.</p>
+  </div>
+
+  <footer>
+    &copy; {{ now|date:"Y" }} Saifeddin Project 🍏
+  </footer>
+
+</body>
+</html>
