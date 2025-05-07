@@ -5,12 +5,12 @@ Saifeddin Qatma
 
 
 
-This is a beginner Django project.
+This is Saifeddin Django project.
 
 ## How to run
 
 1. Clone the project:
-   git clone https://github.com/YourUsername/my-django-project.git
+   git clone https://github.com/Sqatmah/Saifeddin-django-project
 
 2. Install dependencies:
    pip install -r requirements.txt
